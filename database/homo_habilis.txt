@@ -1,4 +1,5 @@
-Força; Manuseio de objetos; Comunicação
-10-16
+Força; Manuseio de objetos; Comunicação; Resistência
+12-16
 8-16
 7-11
+10-12

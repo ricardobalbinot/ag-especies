@@ -4,16 +4,13 @@ import random
 def selecao(populacao, scores):
 	individuosAleatorios = []
 	
-	# Define o número de indivíduos que serão utilizados no torneio (50%)
-	numIndividuosSelecionados = int(len(populacao) / 2)
+	# Define o número de indivíduos que serão utilizados no torneio (10%)
+	numIndividuosSelecionados = int(len(populacao) / 10)
 
-	# Seleciona 1/4 dos indivíduos aleatóriamente
+	# Seleciona 1/10 dos indivíduos aleatóriamente
 	for _ in range(numIndividuosSelecionados):
 		individuo = random.randint(0, len(populacao) - 1)
 		individuosAleatorios.append(individuo)
-
-	# Printa os indivíduos aleatórios que serão utilizados no torneio
-	print('\nIndivíduos aleatórios selecionados: ' + str(individuosAleatorios)) 
 
 	# Primeira seleção aleatória de index
 	selecionado_idx = individuosAleatorios[random.randint(0, numIndividuosSelecionados - 1)]
@@ -25,4 +22,4 @@ def selecao(populacao, scores):
 			selecionado_idx = idx
 
 	# Retorna o melhor indivíduo encontrado
-	return [populacao[selecionado_idx], selecionado_idx, scores[selecionado_idx]]
+	return populacao[selecionado_idx]

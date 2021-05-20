@@ -1,10 +1,19 @@
 def getAtributosEspecie(especie):
   if especie == 'australopithecus_afarensis':
-    return ['Força', 'Caça', 'Comunicação']
+    return ['Força', 'Caça', 'Comunicação', 'Resistência']
   elif especie == 'homo_habilis':
-    return ['Força', 'Manuseio', 'Comunicação'] 
+    return ['Força', 'Manuseio', 'Comunicação', 'Resistência'] 
   elif especie == 'homo_erectus':
-    return ['Força', 'Ferramental', 'Comunicação']
+    return ['Força', 'Ferramental', 'Comunicação', 'Resistência']
+
+def getPesoAtributosEspecie(especie):
+  # Alterar futuramente o peso dos atributos para diferentes espécies
+  if especie == 'australopithecus_afarensis':
+    return [0.25, 0.15, 0.4, 0.2]
+  elif especie == 'homo_habilis':
+    return [0.25, 0.15, 0.4, 0.2] 
+  elif especie == 'homo_erectus':
+    return [0.25, 0.15, 0.4, 0.2]
 
 def printPopulacaoDetalhes(populacao, especie):
   atributos = getAtributosEspecie(especie)

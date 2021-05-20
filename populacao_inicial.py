@@ -1,7 +1,7 @@
 from utils import getPopulacaoEspecie
 import random
 
-def populacao_inicial(especie):
+def populacao_inicial(especie, n_pop):
   populacao = []
 
   # Busca o range base dos atributos daquela espécie
@@ -9,7 +9,7 @@ def populacao_inicial(especie):
   
   i = 0
 
-  while i < 10:
+  while i < n_pop:
     individuo = []
     ignoraHeader = True
 
