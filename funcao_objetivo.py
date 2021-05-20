@@ -19,23 +19,3 @@ def funcao_objetivo(individuo, especie):
     totalScore += (attr * attrPesos[i]) / maxAttr
 
   return round(totalScore, 5)
-
-
-def get_max_ranges(especie):
-  # Busca o range base dos atributos daquela espécie
-  informacoesEspecie = getPopulacaoEspecie(especie)
-
-  maxRanges = list()
-  ignoraHeader = True
-
-  for linha in informacoesEspecie:
-    if(ignoraHeader):
-      ignoraHeader = False
-      continue
-    
-    # Adiciona o range máximo do atributo à lista
-    infosEspecie = linha.replace('\n', '').split('-')
-    maxRange = int(infosEspecie[1])
-    maxRanges.append(maxRange)
-  
-  return maxRanges

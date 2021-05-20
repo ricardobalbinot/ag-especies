@@ -1,5 +1,2 @@
-Força; Construção de Ferramentas; Comunicação; Resistência
-14-16
-11-13
-9-11
-11-13
+Força,Habilidade,Comunicação,Adaptabilidade
+14-16,11-13,9-11,11-13

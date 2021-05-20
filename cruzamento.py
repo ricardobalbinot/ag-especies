@@ -4,7 +4,6 @@ import random
 def cruzamento(p1, p2, t_cruz):
 	# Filhos começam como cópias dos pais
 	f1, f2 = p1.copy(), p2.copy()
-	f3, f4 = p1.copy(), p2.copy()
 
 	# Utiliza o cruzamento se satisfazer a taxa
 	if random.random() < t_cruz:
@@ -13,8 +12,6 @@ def cruzamento(p1, p2, t_cruz):
 
 		# Realiza o cruzamento por ponto de corte
 		f1 = p1[:pc] + p2[pc:]
-		f2 = p1[:pc] + p2[:pc]
-		f3 = p2[:pc] + p1[pc:]
-		f4 = p2[:pc] + p1[:pc]
+		f2 = p2[:pc] + p1[pc:]
 
-	return [f1, f2, f3, f4]
+	return [f1, f2]

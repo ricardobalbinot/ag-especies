@@ -11,15 +11,13 @@ def populacao_inicial(especie, n_pop):
 
   while i < n_pop:
     individuo = []
-    ignoraHeader = True
+
+    # Busca os ranges do arquivo ignorando o cabeçalho
+    ranges = informacoesEspecie[1].split(',')
 
     # Define os parâmetros aleatórios do indivíduo com base no range da sua espécie
-    for linha in informacoesEspecie:
-      if(ignoraHeader):
-        ignoraHeader = False
-        continue
-      
-      infosEspecie = linha.replace('\n', '').split('-')
+    for attr in ranges:
+      infosEspecie = attr.split('-')
       novoAtributo = round(random.uniform(int(infosEspecie[0]), int(infosEspecie[1])), 2)
       individuo.append(novoAtributo)
 
